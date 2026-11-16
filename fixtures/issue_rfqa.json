@@ -1,0 +1,15 @@
+{
+  "source": "fixture",
+  "repo": "rayan-fernandes/todomvc-qa-demo",
+  "number": 42,
+  "title": "[Feature] Persist todos across reloads and keep the counter honest",
+  "state": "open",
+  "column": "Ready for QA",
+  "labels": [
+    "RFQA",
+    "feature",
+    "frontend"
+  ],
+  "url": "https://github.com/rayan-fernandes/todomvc-qa-demo/issues/42",
+  "body": "## User story\n\nAs someone keeping a working list, I want my todos to survive a page reload and the remaining-items counter to stay accurate, so that I can trust the app with real work.\n\n## Context\n\nThe app currently holds todos in memory only, so a refresh wipes the list and the counter is the only thing that hints at state. This issue moves the list into browser storage and makes the footer (counter + filters) reflect reality at all times.\n\nScope is the single-page todo flow only: add, complete, reload, clear. Editing, drag-and-drop reordering and filtering are out of scope for this ticket.\n\n## Acceptance Criteria\n\n- [ ] AC1: On a first load with empty storage, the todo list is empty and the footer (item counter and filter links) is not visible.\n- [ ] AC2: Typing a todo into the \"What needs to be done?\" input and pressing Enter adds it to the list, and the footer shows exactly \"1 item left\".\n- [ ] AC3: Adding a second todo updates the counter to \"2 items left\"; marking one of them complete brings the counter back to \"1 item left\".\n- [ ] AC4: After a full page reload, the todos are still listed and a completed todo is still shown as completed.\n- [ ] AC5: Clicking \"Clear completed\" removes the completed todos and leaves the remaining count correct.\n\n## Notes for QA\n\n- Test on a clean browser profile, with no prior localStorage for the app.\n- The counter pluralises: \"1 item left\" for one, \"2 items left\" for more.\n- Completed items are rendered with a strikethrough on the label.\n"
+}

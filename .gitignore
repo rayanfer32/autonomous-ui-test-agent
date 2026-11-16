@@ -1,0 +1,22 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Node (only if you install the MCP server locally instead of via npx)
+node_modules/
+package-lock.json
+
+# Generated evidence. Keep the folder, ignore the runs.
+evidence/run_*/
+evidence/*.png
+evidence/*.zip
+
+# OS
+.DS_Store
