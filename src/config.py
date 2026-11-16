@@ -36,6 +36,11 @@ PROVIDER_DEFAULTS: dict[str, dict[str, str]] = {
         "api_key_env": "GROQ_API_KEY",
         "model": "openai/gpt-oss-120b",
     },
+    "sarvam": {
+        "base_url": "https://api.sarvam.ai/v2",
+        "api_key_env": "SARVAM_API_KEY",
+        "model": "sarvam-105b",
+    }
 }
 
 

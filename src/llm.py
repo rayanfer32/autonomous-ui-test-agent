@@ -77,6 +77,9 @@ class LLMClient:
         self.settings = settings
         self.max_attempts = max_attempts
         headers: dict[str, str] = {}
+        if settings.provider == "sarvam":
+                    # Sarvam wants api-subscription-key; v2 also accepts Bearer.
+                    headers = {"api-subscription-key": settings.api_key}
         if settings.provider == "openrouter":
             # OpenRouter uses these for attribution/leaderboards. Optional, but
             # it keeps the account in good standing.

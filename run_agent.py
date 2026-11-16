@@ -48,7 +48,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     source.add_argument("--url", help="application under test (overrides TARGET_URL)")
 
     agent = parser.add_argument_group("agent")
-    agent.add_argument("--provider", choices=["openrouter", "groq"], help="LLM provider")
+    agent.add_argument("--provider", choices=["openrouter", "groq", "sarvam"], help="LLM provider")
     agent.add_argument("--model", help="model id (overrides the provider default)")
     agent.add_argument("--max-steps", type=int, help="step budget per scenario")
     agent.add_argument("--out", type=Path, help="evidence root directory")
